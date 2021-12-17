@@ -6,7 +6,7 @@ class CustomUser(AbstractBaseUser):
     email = models.EmailField(unique=True)
     push_token = models.CharField(max_length=150)
     username = models.CharField(blank=True, null=True, max_length=150)
-    projects = models.ManyToManyField("Project", through="UserProject", related_name='users')
+    projects = models.ManyToManyField("Project", related_name='users')
 
     def __str__(self):
         return self.email
@@ -20,8 +20,3 @@ class Project(models.Model):
 
     def __str__(self):
         return self.projectname
-
-
-class UserProject(models.Model):
-    user_id = models.ForeignKey(CustomUser, on_delete=models.PROTECT, related_name='userproject')
-    project_id = models.ForeignKey(Project, on_delete=models.PROTECT, related_name='userproject')

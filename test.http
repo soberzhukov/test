@@ -6,3 +6,61 @@ Content-Type: application/json
 
 POST http://localhost:8000/api/v1/users/
 Content-Type: application/json
+
+  {"email": "ss@mail.ru",
+    "push_token": "safasfa"}
+
+###
+PATCH http://localhost:8000/api/v1/users/1/
+Content-Type: application/json
+
+  {"username": "casha"}
+###
+PUT http://localhost:8000/api/v1/users/1/
+Content-Type: application/json
+
+  {"email": "safafas@mail.ru",
+  "push_token": "safasfa",
+    "username": "21"}
+
+###
+DELETE http://localhost:8000/api/v1/users/2/
+Content-Type: application/json
+
+
+###
+GET http://127.0.0.1:8000/api/v1/projects/
+Content-Type: application/json
+
+###
+
+POST http://localhost:8000/api/v1/projects/
+Content-Type: application/json
+
+{
+  "json": {"project_name":  "project2"},
+  "users": [1]
+}
+
+###
+
+PATCH http://localhost:8000/api/v1/projects/2/
+Content-Type: application/json
+
+{
+  "json": {"project_name":  "project"},
+  "users": [3]
+}
+
+###
+PUT http://localhost:8000/api/v1/projects/1/
+Content-Type: application/json
+
+{
+  "json": {"project_name":  "sert"},
+  "users": [1]
+}
+
+###
+DELETE http://localhost:8000/api/v1/projects/2/
+Content-Type: application/json
