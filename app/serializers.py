@@ -10,6 +10,7 @@ class CustomUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
         fields = ['id', 'email', 'username', 'push_token']
+        read_only_field = []
 
 
 class ProjectSerializer(serializers.ModelSerializer):

@@ -1,13 +1,13 @@
 # получение продуктов
 GET http://localhost:8000/api/v1/users/
 Content-Type: application/json
-
 ###
 
 POST http://localhost:8000/api/v1/users/
 Content-Type: application/json
+Authorization: Token b524f134ccb2a00391787167271321d6ff863e50
 
-  {"email": "ss@mail.ru",
+  {"email": "ss22@mail.ru",
     "push_token": "safasfa"}
 
 ###

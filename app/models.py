@@ -1,8 +1,9 @@
 from django.contrib.auth.base_user import AbstractBaseUser
+from django.contrib.auth.models import AbstractUser
 from django.db import models
 
 
-class CustomUser(AbstractBaseUser):
+class CustomUser(AbstractUser):
     email = models.EmailField(unique=True)
     push_token = models.CharField(max_length=150)
     username = models.CharField(blank=True, null=True, max_length=150)
